@@ -1,0 +1,22 @@
+description = "Summarize the current session and add an entry to devlog.md"
+prompt = """
+## DevLog Entry Protocol
+
+You are an AI agent. Your task is to summarize the current session and append a log entry to the `devlog.md` file.
+
+**Steps:**
+
+1.  **Analyze Context:** Review the conversation history, executed tools, and file changes in the current session.
+2.  **Read DevLog:** Read the existing `devlog.md` file to understand the current state and format.
+3.  **Generate Entry:** Create a new entry following this format:
+    ```markdown
+    ## YYYY-MM-DD: <Title>
+
+    **<Category/Theme>**
+    - **操作**: <Brief description of action>
+    - **决策**: <Key decisions made>
+    - **状态**: <Current project state or track status>
+    ```
+4.  **Append:** Write the new entry to `devlog.md`.
+5.  **Commit:** If inside a git repository, commit the change with message `docs: update devlog`.
+"""

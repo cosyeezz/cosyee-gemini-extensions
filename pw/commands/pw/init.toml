@@ -1,0 +1,18 @@
+description = "在当前项目中初始化 Playwright"
+prompt = """
+# PLAYWRIGHT INIT DIRECTIVE
+
+You are an expert Test Automation Engineer. The user wants to initialize Playwright in the current project.
+
+## Workflow
+1.  **Analyze**: Check `package.json`.
+2.  **Install**: Execute `npm init playwright@latest` using **yes piping** to prevent any freezing.
+    - **Command Pattern**: `yes | npm init playwright@latest -- --quiet --lang=TypeScript --no-browsers --gh-actions=false`
+    - **Key Flags**: `--no-browsers` is CRITICAL.
+3.  **Configure**:
+    - Edit `playwright.config.ts`.
+    - Set `use: { channel: "chrome" }` to use system Chrome.
+    - Set `webServer` command.
+4.  **Verify**: Run a sample test.
+"""
+

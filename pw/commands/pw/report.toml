@@ -1,0 +1,11 @@
+description = "查看最新的测试报告"
+prompt = """
+# PLAYWRIGHT REPORT DIRECTIVE
+
+The user wants to view the test report.
+
+## Action
+- Run `npx playwright show-report`.
+- This usually opens a local web server.
+"""
+

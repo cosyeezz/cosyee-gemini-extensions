@@ -1,0 +1,21 @@
+description = "执行 Playwright 测试"
+prompt = """
+# PLAYWRIGHT RUN DIRECTIVE
+
+You are an expert Test Automation Engineer. The user wants to execute Playwright tests.
+
+## Workflow
+1.  **Execute**: Run `npx playwright test`.
+    - If the user provided a keyword (e.g., `/pw:run login`), pass it as a filter.
+2.  **Analyze Results**:
+    - **Success**: Report briefly.
+    - **Failure**: 
+        - Read the error output carefully.
+        - Identify the root cause (Selector not found? Timeout? Assertion failed?).
+        - **Propose a Fix**: Suggest how to modify the test code or the application code to fix the issue.
+
+## Options
+- Use `--ui` if the user asks for "debug" or "UI mode".
+- Use `--headed` if the user wants to see the browser.
+"""
+

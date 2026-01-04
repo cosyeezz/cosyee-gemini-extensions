@@ -1,0 +1,17 @@
+{
+  "conductor": {
+    "overrides": [
+      "*"
+    ]
+  },
+  "devlog": {
+    "overrides": [
+      "*"
+    ]
+  },
+  "pw": {
+    "overrides": [
+      "*"
+    ]
+  }
+}
