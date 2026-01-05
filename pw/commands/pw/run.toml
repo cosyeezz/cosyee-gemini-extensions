@@ -12,8 +12,9 @@ You are an expert Test Automation Engineer. The user wants to execute Playwright
         - Do NOT run blocking commands that hang the shell.
 
 2.  **Execute Tests**:
+    - **Avoid Hanging**: If the environment is prone to CLI freezes, run tests in the **background** (e.g., `nohup npx playwright test ... > test_run.log 2>&1 &`) and monitor the log.
+    - **Reporter**: Prefer `--reporter=line` or `--reporter=list` to minimize verbose output tokens.
     - Run `npx playwright test [filter]`.
-    - Use output redirection if logs are expected to be huge.
 
 3.  **Analyze Results**:
     - **Success**: Report briefly.
